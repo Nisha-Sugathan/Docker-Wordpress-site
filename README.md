@@ -19,7 +19,7 @@ sudo usermod -a -G docker ec2-user
 ![docker_installation](https://github.com/Nisha-Sugathan/Docker-Bind_mounting/assets/134600837/ba7797c4-9a73-4ce6-b593-2befa5850e0d)
 
 
-### Created a bridge network
+### Create a bridge network
 ```
  docker network create wp-network
  
@@ -71,5 +71,11 @@ We can get the IP address from the docker inspect command and then we can connec
 docker container inspect mysql-server
 mysql -u root -pmysqlroot123 -h 172.18.0.2
 
+```
+
+### Output URL
+
+```
+http://ec2-13-233-237-150.ap-south-1.compute.amazonaws.com/
 ```
 
