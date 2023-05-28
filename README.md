@@ -39,10 +39,10 @@ mysql:8.0.33-debian
 ```
 
 Below are the list of flags used to create the container
-* -d          ---> This flag is used to specify conatiner to run on detached mode.
-* --name      -----> assign aunique nage to container.
+* -d          ---> Docker runs container in the background.
+* --name      -----> assign aunique name to container.
 * ---network  ----> The container should be within the "wp-network".
-* -p          ----> publish the port to specified port.
+* -p          ----> asks Docker to forward traffic incoming on the host’s port xxxx to the container’s port xxxx.
 * -e          ----> environment variables for configuring the WordPress instance.
 
 We need to create a separate container for Wordpress frontend
@@ -58,8 +58,12 @@ wordpress:latest
 
 ```
 
+### Screenshot of list of containers
 
-### connecting mysql Database from ec2 instance
+![image](https://github.com/Nisha-Sugathan/Docker-Wordpress-site/assets/134600837/d58ccc68-0345-44bd-b303-563c6228a38f)
+
+
+### Connecting mysql Database from ec2 instance
 
 We can get the IP address from the docker inspect command and then we can connect with mysqlmysql -u root -pmysqlroot123 -h 172.18.0.2
 
